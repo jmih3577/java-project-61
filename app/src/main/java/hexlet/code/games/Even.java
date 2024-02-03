@@ -1,44 +1,25 @@
-package hexlet.code;
+package hexlet.code.games;
 
-import java.util.Random;
+import hexlet.code.Engine;
+
 import java.util.Scanner;
+import static hexlet.code.Engine.getRandomNumberUsingNextInt;
+import static hexlet.code.Engine.winGamesCount;
 
 public class Even {
-    public static void play(String userName, Scanner scan) {
-        int evenNumber;
-        String answer;
-        boolean errFlag = false;
-        for (int i = 0; i < 3; i++) {
+    public static void play(Scanner scan) {
+        int evenNumber = 0;
+        String[][] answers = new String[winGamesCount][1];
+        System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
+        for (int i = 0; i < winGamesCount; i++) {
             evenNumber = getRandomNumberUsingNextInt(0, 100);
-            System.out.println("Question: " + evenNumber);
-            answer = scan.next();
-            System.out.println("Your answer: " + answer);
+            answers[i][0] = "Question: " + evenNumber;
             if (evenNumber % 2 == 0) {
-                if (answer.equals("yes")) {
-                    System.out.println("Correct!");
-                } else {
-                    System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was 'yes'.");
-                    System.out.println("Let's try again, " + userName + "!");
-                    errFlag = true;
-                    break;
-                }
+                answers[i][1] = "yes";
             } else {
-                if (answer.equals("no")) {
-                    System.out.println("Correct!");
-                } else {
-                    System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was 'no'.");
-                    System.out.println("Let's try again, " + userName + "!");
-                    errFlag = true;
-                    break;
-                }
+                answers[i][1] = "no";
             }
         }
-        if (!errFlag) {
-            System.out.println("Congratulations, " + userName);
-        }
-    }
-    public static int getRandomNumberUsingNextInt(int min, int max) {
-        Random random = new Random();
-        return random.nextInt(max - min) + min;
+        Engine.run(scan, answers);
     }
 }
