@@ -20,7 +20,7 @@ public class Calc {
     public static void play(Scanner scan) {
         int firstNumber;
         int nextNumber;
-        String[][] answers = new String[winGamesCount][1];
+        String[][] answers = new String[winGamesCount][2];
         System.out.println("What is the result of the expression?");
         for (int i = 0; i < winGamesCount; i++) {
             firstNumber = getRandomNumberUsingNextInt(10, 100);
