@@ -8,10 +8,9 @@ import static hexlet.code.Engine.getRandomNumberUsingNextInt;
 import static hexlet.code.Engine.WIN_GAMES_COUNT;
 
 public class NOD {
-
     private static final int MIN_RANGE_RANDOM = 10;
     private static final int MAX_RANGE_RANDOM = 100;
-    
+
     public static void play(Scanner scan) {
         int firstNumber;
         int nextNumber;
