@@ -9,12 +9,15 @@ import static hexlet.code.Engine.winGamesCount;
 
 public class Prime {
 
+    private static final int minRangeRandom = 10;
+    private static final int maxRangeRandom = 100;
+    
     public static void play(Scanner scan) {
         int checkNumber;
         String[][] answers = new String[winGamesCount][2];
         System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
         for (int i = 0; i < winGamesCount; i++) {
-            checkNumber = getRandomNumberUsingNextInt(10, 100);
+            checkNumber = getRandomNumberUsingNextInt(minRangeRandom, maxRangeRandom);
             answers[i][0] = "Question: " + checkNumber;
             answers[i][1] = checkPrime(checkNumber);
         }
