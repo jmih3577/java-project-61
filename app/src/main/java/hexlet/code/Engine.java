@@ -4,14 +4,13 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Engine {
-    public static int winGamesCount = 3;
-    public static String answer = null;
+    public static final int winGamesCount = 3;
     public static void run(Scanner scan, String[][] answers) {
         boolean errFlag = false;
         String userName = greet(scan);
         for (int i = 0; i < winGamesCount; i++) {
             System.out.println(answers[i][0]);
-            answer = scan.next();
+            String answer = scan.next();
             System.out.println("Your answer: " + answer);
             if (answer.equals(answers[i][1])) {
                 System.out.println("Correct!");
