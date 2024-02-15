@@ -11,7 +11,7 @@ public class Prime {
 
     private static final int MIN_RANGE_RANDOM = 10;
     private static final int MAX_RANGE_RANDOM = 100;
-    
+
     public static void play(Scanner scan) {
         int checkNumber;
         String[][] answers = new String[WIN_GAMES_COUNT][2];
