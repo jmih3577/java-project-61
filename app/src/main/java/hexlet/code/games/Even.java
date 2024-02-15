@@ -9,7 +9,7 @@ import static hexlet.code.Engine.winGamesCount;
 public class Even {
     public static void play(Scanner scan) {
         int evenNumber = 0;
-        String[][] answers = new String[winGamesCount][1];
+        String[][] answers = new String[winGamesCount][2];
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
         for (int i = 0; i < winGamesCount; i++) {
             evenNumber = getRandomNumberUsingNextInt(0, 100);
