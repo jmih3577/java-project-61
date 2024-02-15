@@ -9,14 +9,17 @@ import static hexlet.code.Engine.winGamesCount;
 
 public class NOD {
 
+    private static final int minRangeRandom = 10;
+    private static final int maxRangeRandom = 100;
+    
     public static void play(Scanner scan) {
         int firstNumber;
         int nextNumber;
         String[][] answers = new String[winGamesCount][2];
         System.out.println("Find the greatest common divisor of given numbers.");
         for (int i = 0; i < winGamesCount; i++) {
-            firstNumber = getRandomNumberUsingNextInt(10, 100);
-            nextNumber = getRandomNumberUsingNextInt(10, 100);
+            firstNumber = getRandomNumberUsingNextInt(minRangeRandom, maxRangeRandom);
+            nextNumber = getRandomNumberUsingNextInt(minRangeRandom, maxRangeRandom);
             answers[i][0] = "Question: " + firstNumber + " " + nextNumber;
             answers[i][1] = String.valueOf(getGDC(firstNumber, nextNumber));
         }
