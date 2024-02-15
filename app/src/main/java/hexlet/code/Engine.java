@@ -26,7 +26,7 @@ public class Engine {
             }
         }
         if (!errFlag) {
-            System.out.println("Congratulations, " + userName);
+            System.out.println("Congratulations, " + userName + "!");
         }
     }
     public static int getRandomNumberUsingNextInt(int min, int max) {
