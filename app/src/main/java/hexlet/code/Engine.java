@@ -4,11 +4,11 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Engine {
-    public static final int winGamesCount = 3;
+    public static final int WIN_GAMES_COUNT = 3;
     public static void run(Scanner scan, String[][] answers) {
         boolean errFlag = false;
         String userName = greet(scan);
-        for (int i = 0; i < winGamesCount; i++) {
+        for (int i = 0; i < WIN_GAMES_COUNT; i++) {
             System.out.println(answers[i][0]);
             String answer = scan.next();
             System.out.println("Your answer: " + answer);
