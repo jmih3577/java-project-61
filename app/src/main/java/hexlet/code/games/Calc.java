@@ -12,12 +12,12 @@ public class Calc {
     private static final int MIN_RANGE_RANDOM = 10;
     private static final int MAX_RANGE_RANDOM = 100;
     private static final int OPERATOR_RANGE = 3;
-    private int calcResult;
-    private String operand;
+    private final int calcResult;
+    private final String operand;
 
-    Calc(int calcResult, String operand) {
-        this.calcResult = calcResult;
-        this.operand = operand;
+    Calc(int calcRes, String oper) {
+        this.calcResult = calcRes;
+        this.operand = oper;
     }
 
     public static void play(Scanner scan) {
