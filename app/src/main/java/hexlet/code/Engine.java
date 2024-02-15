@@ -3,14 +3,12 @@ package hexlet.code;
 import java.util.Random;
 import java.util.Scanner;
 
-import static hexlet.code.App.gameNum;
-
 public class Engine {
     public static int winGamesCount = 3;
     public static String answer = null;
     public static void run(Scanner scan, String[][] answers) {
         boolean errFlag = false;
-        String userName = greet(gameNum, scan);
+        String userName = greet(scan);
         for (int i = 0; i < winGamesCount; i++) {
             System.out.println(answers[i][0]);
             answer = scan.next();
@@ -34,8 +32,7 @@ public class Engine {
         return random.nextInt(max - min) + min;
     }
 
-    public static String greet(String game, Scanner scan) {
-        System.out.println("Your choice: " + game);
+    public static String greet(Scanner scan) {
         System.out.println();
         System.out.println("Welcome to the Brain Games!");
         return Cli.greeting(scan);
