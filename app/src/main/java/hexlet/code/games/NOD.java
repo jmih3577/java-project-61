@@ -9,8 +9,8 @@ import static hexlet.code.Engine.winGamesCount;
 
 public class NOD {
 
-    private static final int minRangeRandom = 10;
-    private static final int maxRangeRandom = 100;
+    private static final int MIN_RANGE_RANDOM = 10;
+    private static final int MAX_RANGE_RANDOM = 100;
     
     public static void play(Scanner scan) {
         int firstNumber;
@@ -18,8 +18,8 @@ public class NOD {
         String[][] answers = new String[winGamesCount][2];
         System.out.println("Find the greatest common divisor of given numbers.");
         for (int i = 0; i < winGamesCount; i++) {
-            firstNumber = getRandomNumberUsingNextInt(minRangeRandom, maxRangeRandom);
-            nextNumber = getRandomNumberUsingNextInt(minRangeRandom, maxRangeRandom);
+            firstNumber = getRandomNumberUsingNextInt(MIN_RANGE_RANDOM, MAX_RANGE_RANDOM);
+            nextNumber = getRandomNumberUsingNextInt(MIN_RANGE_RANDOM, MAX_RANGE_RANDOM);
             answers[i][0] = "Question: " + firstNumber + " " + nextNumber;
             answers[i][1] = String.valueOf(getGDC(firstNumber, nextNumber));
         }
