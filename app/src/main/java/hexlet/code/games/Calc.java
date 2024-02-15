@@ -34,11 +34,11 @@ public class Calc {
         }
         Engine.run(scan, answers);
     }
-    public String getOperand() {
+    public final String getOperand() {
         return this.operand;
     }
 
-    public int getCalcResult() {
+    public final int getCalcResult() {
         return this.calcResult;
     }
 
