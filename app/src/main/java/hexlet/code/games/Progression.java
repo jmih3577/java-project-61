@@ -7,6 +7,10 @@ import static hexlet.code.Engine.getRandomNumberUsingNextInt;
 import static hexlet.code.Engine.winGamesCount;
 
 public class Progression {
+    private static final int MIN_RANGE_RANDOM = 0;
+    private static final int MAX_RANGE_RANDOM = 100;
+    private static final int MIN_PROGRESSION_LENGTH = 5;
+    private static final int MAX_PROGRESSION_LENGTH = 10;
     public static void play(Scanner scan) {
         int progressionInitNumber = 0;
         int progressionIterationNumber = 0;
@@ -18,10 +22,10 @@ public class Progression {
         System.out.println("What number is missing in the progression?");
         for (int i = 0; i < winGamesCount; i++) {
             question = "";
-            progressionInitNumber = getRandomNumberUsingNextInt(0, 100);
-            progressionIterationNumber = getRandomNumberUsingNextInt(0, 100);
-            progressionLength = getRandomNumberUsingNextInt(5, 10);
-            progressionQuestionNumber = getRandomNumberUsingNextInt(0, progressionLength);
+            progressionInitNumber = getRandomNumberUsingNextInt(MIN_RANGE_RANDOM, MAX_RANGE_RANDOM);
+            progressionIterationNumber = getRandomNumberUsingNextInt(MIN_RANGE_RANDOM, MAX_RANGE_RANDOM);
+            progressionLength = getRandomNumberUsingNextInt(MIN_PROGRESSION_LENGTH, MAX_PROGRESSION_LENGTH);
+            progressionQuestionNumber = getRandomNumberUsingNextInt(MIN_RANGE_RANDOM, progressionLength);
             for (int j = 0; j < progressionLength; j++) {
                 progressionInitNumber += progressionIterationNumber;
                 if (j == progressionQuestionNumber) {
