@@ -38,18 +38,8 @@ public class Calc {
         return this.operand;
     }
 
-    // void потому что ничего не возвращает
-    public void setOperand(String operand) {
-        this.operand = operand;
-    }
-
     public int getCalcResult() {
         return this.calcResult;
-    }
-
-    // void потому что ничего не возвращает
-    public void setCalcResult(int calcResult) {
-        this.calcResult = calcResult;
     }
 
     public static Calc generateExpr(int num1, int num2) {
