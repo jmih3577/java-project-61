@@ -23,6 +23,7 @@ public class App {
         System.out.println("6 - Prime");
         System.out.println("0 - Exit");
         String gameNum = scan.next();
+        System.out.println("Your choice: " + gameNum);
         switch (gameNum) {
             case "0":
                 System.out.println("Your choice: " + gameNum);
