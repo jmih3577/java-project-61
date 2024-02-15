@@ -11,7 +11,6 @@ import java.util.Scanner;
 import static hexlet.code.Cli.greeting;
 
 public class App {
-    public static String gameNum;
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         System.out.println("Welcome to the Brain Games!");
@@ -23,7 +22,7 @@ public class App {
         System.out.println("5 - Progression");
         System.out.println("6 - Prime");
         System.out.println("0 - Exit");
-        gameNum = scan.next();
+        String gameNum = scan.next();
         switch (gameNum) {
             case "0":
                 System.out.println("Your choice: " + gameNum);
