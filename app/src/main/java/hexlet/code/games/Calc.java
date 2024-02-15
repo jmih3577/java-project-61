@@ -6,11 +6,12 @@ import java.util.Random;
 import java.util.Scanner;
 
 import static hexlet.code.Engine.getRandomNumberUsingNextInt;
-import static hexlet.code.Engine.winGamesCount;
+import static hexlet.code.Engine.WIN_GAMES_COUNT;
 
 public class Calc {
     private static final int MIN_RANGE_RANDOM = 10;
     private static final int MAX_RANGE_RANDOM = 100;
+    private static final int OPERATOR_RANGE = 3;
     private int calcResult;
     private String operand;
 
@@ -22,9 +23,9 @@ public class Calc {
     public static void play(Scanner scan) {
         int firstNumber;
         int nextNumber;
-        String[][] answers = new String[winGamesCount][2];
+        String[][] answers = new String[WIN_GAMES_COUNT][2];
         System.out.println("What is the result of the expression?");
-        for (int i = 0; i < winGamesCount; i++) {
+        for (int i = 0; i < WIN_GAMES_COUNT; i++) {
             firstNumber = getRandomNumberUsingNextInt(MIN_RANGE_RANDOM, MAX_RANGE_RANDOM);
             nextNumber = getRandomNumberUsingNextInt(MIN_RANGE_RANDOM, MAX_RANGE_RANDOM);
             Calc calc = Calc.generateExpr(firstNumber, nextNumber);
@@ -55,7 +56,7 @@ public class Calc {
         String operand = null;
         int res = 0;
         Random operatorChoice = new Random();
-        int operator = operatorChoice.nextInt(3);
+        int operator = operatorChoice.nextInt(OPERATOR_RANGE);
 
         switch (operator) {
             case 0: operand = "+";
