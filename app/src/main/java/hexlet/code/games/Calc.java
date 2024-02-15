@@ -9,6 +9,8 @@ import static hexlet.code.Engine.getRandomNumberUsingNextInt;
 import static hexlet.code.Engine.winGamesCount;
 
 public class Calc {
+    private static final int MIN_RANGE_RANDOM = 10;
+    private static final int MAX_RANGE_RANDOM = 100;
     private int calcResult;
     private String operand;
 
@@ -23,8 +25,8 @@ public class Calc {
         String[][] answers = new String[winGamesCount][2];
         System.out.println("What is the result of the expression?");
         for (int i = 0; i < winGamesCount; i++) {
-            firstNumber = getRandomNumberUsingNextInt(10, 100);
-            nextNumber = getRandomNumberUsingNextInt(10, 100);
+            firstNumber = getRandomNumberUsingNextInt(MIN_RANGE_RANDOM, MAX_RANGE_RANDOM);
+            nextNumber = getRandomNumberUsingNextInt(MIN_RANGE_RANDOM, MAX_RANGE_RANDOM);
             Calc calc = Calc.generateExpr(firstNumber, nextNumber);
             answers[i][0] = "Question: " + firstNumber + " " + calc.getOperand() + " " + nextNumber;
             answers[i][1] = String.valueOf(calc.getCalcResult());
